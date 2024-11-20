@@ -17,3 +17,24 @@ keyup = lambda key: ecp_invoke('POST', '/keyup/' + key)
 launch = lambda appID: ecp_invoke('POST', '/launch/' + appID)
 send_input = lambda dict: ecp_invoke('POST', '/input?' + '&'.join(map('='.join, list(dict.items()))))
 
+try:
+    while True:
+        char = input("")
+        if char == "i": 
+            keypress('Up')
+            print('\033[F\u2191')  # move to start of previous line print up arrow
+        if char == "l": 
+            keypress('Right')
+            print('\033[F\u2B95')  # move to start of previous line print Right arrow
+        if char == "j": 
+            keypress('Left')
+        if char == "k": 
+            keypress('Select')
+        if char == ",": 
+            keypress('Down')
+        if char == "h": 
+            keypress('Home')
+        if char == "b": 
+            keypress('Back')
+except KeyboardInterrupt:
+    pass
