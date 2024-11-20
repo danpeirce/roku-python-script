@@ -1,5 +1,6 @@
 import http.client
 import urllib.request, urllib.parse, urllib.error
+import msvcrt
 
 def ecp_invoke(op, path):
     conn = http.client.HTTPConnection(ROKU_IP, 8060)
@@ -19,22 +20,26 @@ send_input = lambda dict: ecp_invoke('POST', '/input?' + '&'.join(map('='.join, 
 
 try:
     while True:
-        char = input("")
-        if char == "i": 
+        pressedKey = msvcrt.getch()
+        if pressedKey == 'i': 
             keypress('Up')
             print('\033[F\u2191')  # move to start of previous line print up arrow
-        if char == "l": 
+        if pressedKey == 'l': 
             keypress('Right')
             print('\033[F\u2B95')  # move to start of previous line print Right arrow
-        if char == "j": 
+        if pressedKey == "j": 
             keypress('Left')
-        if char == "k": 
+            print('\033[F\u2190')  # move to start of previous line print Left arrow     
+        if pressedKey == "k": 
             keypress('Select')
-        if char == ",": 
+        if pressedKey == ",": 
             keypress('Down')
-        if char == "h": 
+        if pressedKey == "h": 
             keypress('Home')
-        if char == "b": 
+        if pressedKey == "b": 
             keypress('Back')
+        if pressedKey == 'z': 
+            sys.exit()
+
 except KeyboardInterrupt:
     pass
