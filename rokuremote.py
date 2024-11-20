@@ -19,6 +19,8 @@ keyup = lambda key: ecp_invoke('POST', '/keyup/' + key)
 launch = lambda appID: ecp_invoke('POST', '/launch/' + appID)
 send_input = lambda dict: ecp_invoke('POST', '/input?' + '&'.join(map('='.join, list(dict.items()))))
 
+print("Roku Remote Control")
+
 try:
     while True:
         pressedKey = msvcrt.getch()
@@ -27,7 +29,7 @@ try:
             print('\u2191')  #  print up arrow
         if pressedKey == b'l': 
             keypress('Right')
-            print('\u2B95')  #  print Right arrow
+            print('\u2192')  #  print Right arrow
         if pressedKey == b'j': 
             keypress('Left')
             print('\u2190')  #  print Left arrow     
