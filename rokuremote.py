@@ -1,6 +1,7 @@
 import http.client
 import urllib.request, urllib.parse, urllib.error
 import msvcrt
+import sys
 
 def ecp_invoke(op, path):
     conn = http.client.HTTPConnection(ROKU_IP, 8060)
@@ -21,24 +22,37 @@ send_input = lambda dict: ecp_invoke('POST', '/input?' + '&'.join(map('='.join, 
 try:
     while True:
         pressedKey = msvcrt.getch()
-        if pressedKey == 'i': 
+        if pressedKey == b'i': 
             keypress('Up')
-            print('\033[F\u2191')  # move to start of previous line print up arrow
-        if pressedKey == 'l': 
+            print('\u2191')  #  print up arrow
+        if pressedKey == b'l': 
             keypress('Right')
-            print('\033[F\u2B95')  # move to start of previous line print Right arrow
-        if pressedKey == "j": 
+            print('\u2B95')  #  print Right arrow
+        if pressedKey == b'j': 
             keypress('Left')
-            print('\033[F\u2190')  # move to start of previous line print Left arrow     
-        if pressedKey == "k": 
+            print('\u2190')  #  print Left arrow     
+        if pressedKey == b'k': 
             keypress('Select')
-        if pressedKey == ",": 
+            print('Select')
+        if pressedKey == b',': 
             keypress('Down')
-        if pressedKey == "h": 
+            print('\u2193')  #  print Down arrow
+        if pressedKey == b'h': 
             keypress('Home')
-        if pressedKey == "b": 
+            print('Home')
+        if pressedKey == b'b': 
             keypress('Back')
-        if pressedKey == 'z': 
+            print('Back')
+        if pressedKey == b'n': 
+            launch('12')
+            print('Launch Netflix')
+        if pressedKey == b'p': 
+            launch('13')
+            print('Launch Prime Video')
+        if pressedKey == b'y': 
+            launch('837')
+            print('Launch Youtube')
+        if pressedKey == b'z': 
             sys.exit()
 
 except KeyboardInterrupt:
