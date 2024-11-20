@@ -52,6 +52,18 @@ try:
         if pressedKey == b'y': 
             launch('837')
             print('Launch Youtube')
+        if pressedKey == b'c': 
+            launch('614780')
+            print('Launch CBC Gem')
+        if pressedKey == b's': 
+            launch('22297')
+            print('Launch Spotify')
+        if pressedKey == b'w': 
+            launch('84056')
+            print('Launch The Weather Network')
+        if pressedKey == b'g': 
+            launch('259870')
+            print('Launch Global TV')
         if pressedKey == b'z': 
             sys.exit()
 
