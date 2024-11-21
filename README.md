@@ -65,3 +65,11 @@ The script can be launched with a batch file. I use an Anaconda terminal as show
 
 ![](commandLine.png)
 
+The script is exited by pressing the z.
+
+### Typing Text
+
+Filling text into search screens with a real keyboard is a lot more efficient than using a remote. The script switches to fill text mode
+after pressing the f key. 
+
+To exit the fill text mode press the = key.
