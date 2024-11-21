@@ -36,6 +36,9 @@ try:
         if pressedKey == b'k': 
             keypress('Select')
             print('Select')
+        if pressedKey == b'e': 
+            keypress('Enter')
+            print('Enter')            
         if pressedKey == b',': 
             keypress('Down')
             print('\u2193')  #  print Down arrow
