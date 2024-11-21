@@ -11,6 +11,9 @@ def ecp_invoke(op, path):
     conn.close()
     return res
 
+        
+        
+
 ROKU_IP = '192.168.0.25'
 get_app_list = lambda: ecp_invoke('GET', '/query/apps')
 keypress = lambda key: ecp_invoke('POST', '/keypress/' + key)
@@ -69,6 +72,16 @@ try:
         elif pressedKey == b'g': 
             launch('259870')
             print('Launch Global TV')
+        elif pressedKey == b'f':
+            while True:
+                pressedKey2 = msvcrt.getch()
+                if pressedKey2 != b'=':
+                    outputst = 'Lit_' + pressedKey2.decode('utf-8')
+                    keypress(outputst)
+                    print(pressedKey2.decode('utf-8'), end="")
+                else:
+                    print(' ')
+                    break
         elif pressedKey == b'z': 
             sys.exit()
 
