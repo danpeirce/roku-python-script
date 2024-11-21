@@ -58,18 +58,18 @@ Looking for a simple Python script for controlling a Roku I came across:
 
 The code was old and written for python 2. A utility was used to convert the code to work in python 3.
 The code obtain provided functions that could be used to interact with a Roku. A control loop was added that would
-respond to single character keypresses on a computer keyboard and send commands to the Roku. Note that the script 
+respond to single character key presses on a computer keyboard and send commands to the Roku. Note that the script 
 is active when the command window has focus.
 
 The script can be launched with a batch file. I use an Anaconda terminal as shown in the screen shot:
 
 ![](commandLine.png)
 
-The script is exited by pressing the z.
+The script is exited by pressing the **Tab** key.
 
 ### Typing Text
 
 Filling text into search screens with a real keyboard is a lot more efficient than using a remote. The script switches to fill text mode
-after pressing the f key. 
+after pressing the **f** key. 
 
-To exit the fill text mode press the = key.
+To exit the fill text mode press the **Return** key.

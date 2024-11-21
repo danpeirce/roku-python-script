@@ -73,16 +73,23 @@ try:
             launch('259870')
             print('Launch Global TV')
         elif pressedKey == b'f':
+            print('Fill Text: to exit mode use \"=\"')
             while True:
                 pressedKey2 = msvcrt.getch()
-                if pressedKey2 != b'=':
+                if pressedKey2 == b' ':
+                    pressedKey2 = b','
+                elif pressedKey2 == b'\t':
+                    pressedKey2 = b','
+                elif pressedKey2 == b'\b':
+                    pressedKey2 = b','
+                if pressedKey2 != b'\r':
                     outputst = 'Lit_' + pressedKey2.decode('utf-8')
                     keypress(outputst)
                     print(pressedKey2.decode('utf-8'), end="")
                 else:
                     print(' ')
                     break
-        elif pressedKey == b'z': 
+        elif pressedKey == b'\t': 
             sys.exit()
 
 except KeyboardInterrupt:
