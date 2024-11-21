@@ -27,49 +27,49 @@ try:
         if pressedKey == b'i': 
             keypress('Up')
             print('\u2191')  #  print up arrow
-        if pressedKey == b'l': 
+        elif pressedKey == b'l': 
             keypress('Right')
             print('\u2192')  #  print Right arrow
-        if pressedKey == b'j': 
+        elif pressedKey == b'j': 
             keypress('Left')
             print('\u2190')  #  print Left arrow     
-        if pressedKey == b'k': 
+        elif pressedKey == b'k': 
             keypress('Select')
             print('Select')
-        if pressedKey == b'e': 
+        elif pressedKey == b'e': 
             keypress('Enter')
             print('Enter')            
-        if pressedKey == b',': 
+        elif pressedKey == b',': 
             keypress('Down')
             print('\u2193')  #  print Down arrow
-        if pressedKey == b'h': 
+        elif pressedKey == b'h': 
             keypress('Home')
             print('Home')
-        if pressedKey == b'b': 
+        elif pressedKey == b'b': 
             keypress('Back')
             print('Back')
-        if pressedKey == b'n': 
+        elif pressedKey == b'n': 
             launch('12')
             print('Launch Netflix')
-        if pressedKey == b'p': 
+        elif pressedKey == b'p': 
             launch('13')
             print('Launch Prime Video')
-        if pressedKey == b'y': 
+        elif pressedKey == b'y': 
             launch('837')
             print('Launch Youtube')
-        if pressedKey == b'c': 
+        elif pressedKey == b'c': 
             launch('614780')
             print('Launch CBC Gem')
-        if pressedKey == b's': 
+        elif pressedKey == b's': 
             launch('22297')
             print('Launch Spotify')
-        if pressedKey == b'w': 
+        elif pressedKey == b'w': 
             launch('84056')
             print('Launch The Weather Network')
-        if pressedKey == b'g': 
+        elif pressedKey == b'g': 
             launch('259870')
             print('Launch Global TV')
-        if pressedKey == b'z': 
+        elif pressedKey == b'z': 
             sys.exit()
 
 except KeyboardInterrupt:
