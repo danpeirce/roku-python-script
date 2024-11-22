@@ -61,9 +61,7 @@ The code obtain provided functions that could be used to interact with a Roku. A
 respond to single character key presses on a computer keyboard and send commands to the Roku. Note that the script 
 is active when the command window has focus.
 
-The script can be launched with a batch file. I use an Anaconda terminal as shown in the screen shot:
-
-![](commandLine.png)
+The script can be launched with a batch file. I use an Anaconda terminal as shown in the screen shot.
 
 The script is exited by pressing the **Tab** key.
 
@@ -82,5 +80,5 @@ but generally not most symbols or white space. To send a space in all cases one 
 ### YouTube Lingering Select
 
 In the YouTube app holding the remote OK key will bring up additional options. Options like **Don't recomend this channel**. 
-Holding the Select key does not work the same way buy sending keydown rather then keypress on the Select does bring the options up. This Python 
+Holding the Select key does not work the same way but sending keydown rather then keypress on the Select does bring the options up. This Python 
 script will do this if one uses the capital K. Use the lower case k for normal select.
