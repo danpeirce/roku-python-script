@@ -36,6 +36,21 @@ try:
         elif pressedKey == b'j': 
             keypress('Left')
             print('\u2190')  #  print Left arrow     
+        elif pressedKey == b'o': 
+            keypress('Info')
+            print('Info')
+        elif pressedKey == b'u': 
+            keypress('InstantReplay')
+            print('InstantReplay')
+        elif pressedKey == b'm': 
+            keypress('Rev')
+            print('Rev') 
+        elif pressedKey == b'/': 
+            keypress('Fwd')
+            print('Fwd')     
+        elif pressedKey == b'.': 
+            keypress('Play')
+            print('Play')            
         elif pressedKey == b'k': 
             keypress('Select')
             print('Select')
