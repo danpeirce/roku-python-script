@@ -39,6 +39,9 @@ try:
         elif pressedKey == b'k': 
             keypress('Select')
             print('Select')
+        elif pressedKey == b'K': # Keydown on Select gives extra options 
+            keydown('Select')    #  in YouTube
+            print('Select')
         elif pressedKey == b'e': 
             keypress('Enter')
             print('Enter')            

@@ -73,3 +73,14 @@ Filling text into search screens with a real keyboard is a lot more efficient th
 after pressing the **f** key. 
 
 To exit the fill text mode press the **Return** key.
+
+The text input interface is not consistent in all Roku applications. The text entry in this script is working with YouTube, Netflix and Roku but not
+working in Prime video and possibly others. In those cases one needs to revert to using the interface in the same way they would with the original remote, which 
+is to say when the keyboard text input interface is not working one needs to revert to the on screen keyboard. In all cases one can send basic characters and numerals 
+but generally not most symbols or white space. To send a space in all cases one needs to use the one screen keyboard.
+
+### YouTube Lingering Select
+
+In the YouTube app holding the remote OK key will bring up additional options. Options like **Don't recomend this channel**. 
+Holding the Select key does not work the same way buy sending keydown rather then keypress on the Select does bring the options up. This Python 
+script will do this if one uses the capital K. Use the lower case k for normal select.
