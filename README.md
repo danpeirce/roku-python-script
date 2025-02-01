@@ -16,7 +16,7 @@ Below is a screenshot of the Anaconda window. The app was written for use in win
 
 ## Roku Settings
 
-As of January 2025 the roku received an update. It no longer responded to ECP kepresses by default. Changing the 
+As of January 2025 the roku received an update. It no longer responded to ECP "keypresses". Changing the 
 "Control by mobile apps" to **Enabled** rather than the now default **limited** fixed the issue.
 
 [Wi-Fi-connectivity/No-more-ECP](https://community.roku.com/t5/Wi-Fi-connectivity/No-more-ECP-or-how-to-loses-customers-in-a-single-update/td-p/1033350)
